@@ -1,0 +1,24 @@
+{
+  "name": "Researcher",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "answers": {
+      "type": "hasMany",
+      "model": "Answer",
+      "foreignKey": "researcherId"
+    },
+    "questions": {
+      "type": "hasMany",
+      "model": "Question",
+      "foreignKey": "researcherId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

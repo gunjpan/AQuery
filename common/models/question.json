@@ -1,0 +1,33 @@
+{
+  "name": "Question",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "que": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "answers": {
+      "type": "hasMany",
+      "model": "Answer",
+      "foreignKey": ""
+    },
+    "researcher": {
+      "type": "belongsTo",
+      "model": "Researcher",
+      "foreignKey": "researcherId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
