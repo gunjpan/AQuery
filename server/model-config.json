@@ -39,5 +39,9 @@
   "Answer": {
     "dataSource": "mongoDs",
     "public": true
+  },
+  "Researcher": {
+    "dataSource": "mongoDs",
+    "public": true
   }
 }
