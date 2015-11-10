@@ -4,10 +4,10 @@
     "connector": "memory"
   },
   "mongoDs": {
-    "name": "mongoDs",
-    "connector": "mongodb",
-    "host":"localhost",
+    "host": "localhost",
     "port": 27017,
-    "database":"aquery"
+    "database": "aquery",
+    "name": "mongoDs",
+    "connector": "mongodb"
   }
 }
