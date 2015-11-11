@@ -1,8 +1,5 @@
 module.exports = function(Researcher) {
-	//var emailDs = app.dataSources.emailDs;
-	
-	
-// create after remote hoook to send email confirmation when the user is registered
+	// 'create' after remote hoook to send email confirmation when the user is registered
 	// Researcher.afterRemote('create', function(context, user){
 	// 	console.log('>>researcher.afterRemote triggered');
 	// 	var Email = Researcher.app.Email;
@@ -19,18 +16,18 @@ module.exports = function(Researcher) {
 	// 		//next();
 	// 	});
 	// });
-	
+// operation hook: after save which runs after successful model creation
 	Researcher.observe('after save', function(ctx, next){
-		console.log('saved ctx', ctx.instance.email);
+		console.log('saved Email:', ctx.instance.email);
 		var app = Researcher.app;
 		var Email = app.models.Email;
-		var emailDs = app.dataSources.emailDs;
+		//var emailDs = Researcher.app.dataSources.emailDs;
 		
 		Email.send({
 			to: ctx.instance.email,
 			from: 'noreply.aquery@gmail.com',// emailDs.transports[0].auth.user,
 			subject: 'Registered succesffuly',
-			text: 'You are now registered to AQuery ;) - theGman'
+			text: 'Welcome to AQuery, a place where you can rest your curiosity!!!'
 			
 		}, function (err) {
 			if (err) throw err;
