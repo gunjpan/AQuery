@@ -6,6 +6,10 @@
     "validateUpsert": true
   },
   "properties": {
+     "title": {
+      "type": "string",
+      "required": true
+    },
     "que": {
       "type": "string",
       "required": true

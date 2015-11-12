@@ -1,0 +1,15 @@
+<section>
+  <h1 >
+    {{question.title}}
+  </h1>
+   
+     <p ng-hide="answers.length"> No Answer yet</p>
+<blockquote  ng-repeat="a in answers.slice().reverse()">
+  
+    <p>{{ a.ans}}
+      
+    </p>      
+  <footer>-{{ a.researcher.username}} | {{a.date | date: 'medium'}}</footer>
+</blockquote> 
+    
+</section>

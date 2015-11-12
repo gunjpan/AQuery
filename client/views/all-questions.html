@@ -1,0 +1,12 @@
+<section>
+
+   <blockquote ng-repeat="q in questions.slice().reverse()">
+        <a ui-sref="question({id:q.id})" ui-sref-active="active">
+            <p>{{q.que}}</p>
+            <p>{{q.id}}</p>
+            <footer>- {{q.researcher.username}}</footer>
+        </a>
+        <pre> {{ q | json }}</pre>
+    </blockquote>
+
+</section>

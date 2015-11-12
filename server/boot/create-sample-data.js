@@ -25,9 +25,9 @@ module.exports = function (app) {
 			if (err) return cb(err);
 			var Researcher = app.models.Researcher;
 			Researcher.create([
-				{ email: 'foo@bar.com', password: 'foobar'},
-				{ email: 'john@doe.com', password: 'johndoe'},
-				{ email: 'jane@doe.com', password: 'janedoe'}
+				{ email: 'foo@bar.com', password: 'foobar', username:'FooBar'},
+				{ email: 'john@doe.com', password: 'johndoe', username:'John'},
+				{ email: 'jane@doe.com', password: 'janedoe', username:'Jane'}
 			], cb);
 		});
 	}
@@ -37,10 +37,10 @@ module.exports = function (app) {
 			if (err) return cb(err);
 			var Question = app.models.Question;
 			Question.create([
-				{ que: 'reasearcher 0: question 1 ?', date: Date.now(), researcherId: researchers[0].id },
-				{ que: 'researcher 1: question 2 ?', date: Date.now(), researcherId: researchers[1].id },
-				{ que: 'researcher 0: question 3 ?', date: Date.now(), researcherId: researchers[0].id },
-				{ que: 'researcher 2: question 4 ?', date: Date.now(), researcherId: researchers[2].id }
+				{ title:'question 1', que: 'reasearcher 1: question 1 ?', date: Date.now(), researcherId: researchers[0].id },
+				{ title:'question 2', que: 'researcher 2: question 2 ?', date: Date.now(), researcherId: researchers[1].id },
+				{ title:'question 3', que: 'researcher 1: question 3 ?', date: Date.now(), researcherId: researchers[0].id },
+				{ title:'question 4', que: 'researcher 3: question 4 ?', date: Date.now(), researcherId: researchers[2].id }
 			], cb);
 
 		})
@@ -51,10 +51,10 @@ module.exports = function (app) {
 			if (err) return cb(err);
 			var Answer = app.models.Answer;
 			Answer.create([
-				{ ans: 'ans for question:0', date: Date.now(), questionId: questions[0].id, researcherId: researchers[0].id },
-				{ ans: 'ans for question:1', date: Date.now(), questionId: questions[1].id, researcherId: researchers[1].id },
-				{ ans: 'ans for question: 2', date: Date.now(), questionId: questions[2].id, researcherId: researchers[0].id },
-				{ ans: 'ans for question:3', date: Date.now(), questionId: questions[0].id, researcherId: researchers[2].id }
+				{ ans: 'ans for question:1', date: Date.now(), questionId: questions[0].id, researcherId: researchers[0].id },
+				{ ans: 'ans for question:2', date: Date.now(), questionId: questions[1].id, researcherId: researchers[1].id },
+				{ ans: 'ans for question:3', date: Date.now(), questionId: questions[2].id, researcherId: researchers[0].id },
+				{ ans: 'ans for question:1', date: Date.now(), questionId: questions[0].id, researcherId: researchers[2].id }
 
 			], cb);
 
