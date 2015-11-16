@@ -1,15 +1,32 @@
 <section>
-  <h1 >
-    {{question.title}}
-  </h1>
-   
-     <p ng-hide="answers.length"> No Answer yet</p>
-<blockquote  ng-repeat="a in answers.slice().reverse()">
-  
-    <p>{{ a.ans}}
-      
-    </p>      
-  <footer>-{{ a.researcher.username}} | {{a.date | date: 'medium'}}</footer>
-</blockquote> 
-    
+  <div class="panel panel-default">
+
+    <div class="panel-body">
+      <div class="jumbotron">
+        <div class="container">
+          <h2>
+         {{question.title}}
+      </h2>
+          <blockquote>
+            <p> {{question.que}}</p>
+            <footer> {{question.researcher.username}} | {{question.date | date:'medium'}}</footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">Answers:</div>
+        <div class="panel-body">
+          <h4 class="alert" ng-hide="answers.length"> No Answers yet</h4>
+          <blockquote ng-repeat="a in answers.slice().reverse()">
+
+            <p>{{ a.ans}}
+
+            </p>
+            <footer>{{ a.researcher.username}} | {{a.date | date: 'medium'}}</footer>
+          </blockquote>
+          <div ng-show="currentUser" ng-controller="AnswerForm" ng-include="template.url"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

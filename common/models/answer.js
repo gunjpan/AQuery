@@ -37,8 +37,8 @@ module.exports = function (Answer) {
 	function sendEmail(instance, user, Email, cb) {
 
 		Email.send({
-			to: 'noreply.aquery@gmail.com',//ctx.instance.email,
-			from: 'noreply.aquery@gmail.com',// emailDs.transports[0].auth.user,
+			to: 'aquery.noreply@gmail.com',//ctx.instance.email,
+			from: 'aquery.noreply@gmail.com',// emailDs.transports[0].auth.user,
 			subject: 'Notification: AQuery',
 			text: 'You have a new answer for:' + instance.que + ' on AQuery'
 

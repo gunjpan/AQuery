@@ -1,0 +1,23 @@
+Models:
+		Answer, Question, Researcher
+
+Built in Model used: email
+
+
+
+
+Relationship:
+
+	A Question has many answers
+	A Question belongs to a Researcher
+	
+
+	An Answer belongs to a Question
+	An Answer belongs to a Researcher
+	
+	A Researcher has many questions
+	A Researcher has many answers
+
+DataSources connector:
+	MongoDB
+	Email

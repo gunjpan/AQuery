@@ -1,12 +1,14 @@
 <section>
+    <div class="panel panel-default">
+        <div class="panel-heading">All Questions</div>
+        <div class="panel-body">
+            <blockquote ng-repeat="q in questions.slice().reverse()">
+                <a ui-sref="question({id:q.id})" ui-sref-active="active">
+                    <p>{{q.title}}</p>
+                    <footer class="">{{q.researcher.username}} | {{q.date | date: 'medium'}}</footer>
+                </a>
 
-   <blockquote ng-repeat="q in questions.slice().reverse()">
-        <a ui-sref="question({id:q.id})" ui-sref-active="active">
-            <p>{{q.que}}</p>
-            <p>{{q.id}}</p>
-            <footer>- {{q.researcher.username}}</footer>
-        </a>
-        <pre> {{ q | json }}</pre>
-    </blockquote>
-
+            </blockquote>
+        </div>
+    </div>
 </section>

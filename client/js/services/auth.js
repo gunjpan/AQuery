@@ -1,5 +1,3 @@
-//Auth service to handle authentication related functions
-
 angular
   .module('app')
   .factory('AuthService', ['Researcher', '$q', '$rootScope', function(User, $q,
@@ -12,7 +10,8 @@ angular
           $rootScope.currentUser = {
             id: response.user.id,
             tokenId: response.id,
-            email: email
+            email: email,
+            username: response.user.username
           };
         });
     }
@@ -26,9 +25,10 @@ angular
        });
     }
 
-    function register(email, password) {
+    function register(username,email, password) {
       return User
         .create({
+          username: username,
          email: email,
          password: password
        })

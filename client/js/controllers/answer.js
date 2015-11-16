@@ -1,7 +1,7 @@
 angular
   .module('app')
-  .controller('AddAnswerController')
-  .controller('EditAnswerController')
-  .controller('MyAnswersController')
-  .controller('DeleteAnswerController');
-  
+ 
+  // .controller('EditAnswerController')
+  // .controller('MyAnswersController')
+  // .controller('DeleteAnswerController');
+  // 

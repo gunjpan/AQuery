@@ -1,0 +1,16 @@
+<section>
+
+	<div class="jumbotron" >
+		<div class="container">Your Answer:
+			<blockquote  ng-controller="AddAnswerController">
+				<form name="form"  ng-submit="submitAnswer()">
+					<input type="hidden" ng-model="answer.questionId" value="{{question.id}}"></input>
+					<p>
+						<textarea class="form-control" rows="6" autofocus ng-model="answer.ans" required></textarea>
+					</p>
+					<button class="btn btn-primary btn-block " type="submit">Submit</button>
+				</form>
+			</blockquote>
+		</div>
+	</div>
+</section>

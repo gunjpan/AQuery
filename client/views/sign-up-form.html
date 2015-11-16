@@ -1,0 +1,21 @@
+<section>
+<div class="container">
+
+      <form class="form-signin" name="form" ng-submit="register()">
+        <h2 class="form-signin-heading">Please Sing Up</h2>
+		
+        <label for="inputUsername" class="sr-only">Select Username:</label>
+        <input type="text" id="inputUsername" class="form-control" placeholder="Username" autofocus ng-model="user.username" required>
+		
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" id="inputEmail" class="form-control" placeholder="Email address" autofocus ng-model="user.email" required>
+        <label for="inputPassword" class="sr-only" >Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password"  ng-model="user.password" required>
+        <div class="checkbox">
+         
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+      </form>
+
+    </div>
+</section>

@@ -1,7 +1,6 @@
 angular
   .module('app', [
     'ui.router',
-    //'ui.bootstrap',
     'lbServices'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
@@ -30,9 +29,9 @@ angular
         authenticate: true
       })
       .state('add-answer', {
-        url: '/add-answer',
+        url: '/question/:id',
         templateUrl: 'views/answer-form.html',
-        controller: 'AddAnswerController',
+        controller: 'YAnswerController',
         authenticate: true
       })
        .state('my-answers', {
