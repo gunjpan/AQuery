@@ -4,9 +4,12 @@ angular
     function ($scope, Question) {
       $scope.questions = Question.find({
         filter: {
-          include: [
+            where:{
+                title:{ inq :['Whoaa Loopback?', 'What is Node']}
+             },
+            include: [
             'researcher'
-          ]
+           ]
         }
       })
     }])

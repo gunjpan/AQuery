@@ -3,21 +3,21 @@ module.exports = function (Answer) {
 	Answer.observe('after save', function (ctx, next) {
 		var qid = ctx.instance.questionId
 		var app = Answer.app;
-		var Email = app.models.Email;
+		//var Email = app.models.Email;
 		var user = ctx.instance.user;
 		//var emailDs = Researcher.app.dataSources.emailDs;
 		 
 		//get question title/description from Question model
-		var Question = app.models.Question;
-		Question.findById(qid, function (err, instance) {
-			if (err) return err;
-			sendEmail(instance, user, Email, function (err, res) {
-				if (err) throw err;
-				console.log('> email sent successfully');
-				next();
-			});
+		// var Question = app.models.Question;
+		// Question.findById(qid, function (err, instance) {
+		// 	if (err) return err;
+		// 	sendEmail(instance, user, Email, function (err, res) {
+		// 		if (err) throw err;
+		// 		console.log('> email sent successfully');
+		// 		next();
+		// 	});
 
-		});
+		// });
 
 		
 		//send email

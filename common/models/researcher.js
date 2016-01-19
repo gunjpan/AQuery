@@ -16,23 +16,23 @@ module.exports = function(Researcher) {
 	// 		//next();
 	// 	});
 	// });
-// operation hook: after save which runs after successful model creation
-	Researcher.observe('after save', function(ctx, next){
-		console.log('saved Email:', ctx.instance.email);
-		var app = Researcher.app;
-		var Email = app.models.Email;
-		//var emailDs = Researcher.app.dataSources.emailDs;
+// // operation hook: after save which runs after successful model creation
+// 	Researcher.observe('after save', function(ctx, next){
+// 		console.log('saved Email:', ctx.instance.email);
+// 		var app = Researcher.app;
+// 		var Email = app.models.Email;
+// 		//var emailDs = Researcher.app.dataSources.emailDs;
 		
-		Email.send({
-			to: ctx.instance.email,
-			from: 'noreply.aquery@gmail.com',// emailDs.transports[0].auth.user,
-			subject: 'Registered succesffuly',
-			text: 'Welcome to AQuery, a place where you can rest your curiosity!!!'
+// 		Email.send({
+// 			to: ctx.instance.email,
+// 			from: 'noreply.aquery@gmail.com',// emailDs.transports[0].auth.user,
+// 			subject: 'Registered succesffuly',
+// 			text: 'Welcome to AQuery, a place where you can rest your curiosity!!!'
 			
-		}, function (err) {
-			if (err) throw err;
-			console.log('> email sent successfully');
-			next();
-		});
-	});
+// 		}, function (err) {
+// 			if (err) throw err;
+// 			console.log('> email sent successfully');
+// 			next();
+// 		});
+// 	});
 };

@@ -24,8 +24,8 @@
         "rejectUnauthorized": false
          },
         "auth": {
-          "user": "aquery.noreply@gmail.com",
-          "pass": "aqueryloopback"
+          "user": "yourcompany@domain.com",
+          "pass": "yourpasswod"
          }
       }
     ]
