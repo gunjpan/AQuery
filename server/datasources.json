@@ -24,7 +24,7 @@
         "rejectUnauthorized": false
          },
         "auth": {
-          "user": "aquery.noreply@gmail.com",
+          "user": "yourcompanyemail",
           "pass": "***"
          }
       }
